@@ -1,11 +1,14 @@
 # Parse Text from PDF file
+
 This tool is intended to parse or extract text from pdf,
 not only extract but also arrange the text in the order
 like in the pdf. Thus, we can use the data in excel for 
 further processing. 
+
 The tool are created using the help of pdfjsLib from mozilla pdf.js.
 Successfully tested using pdfjsLib version 2.9.359.
 Please use this version instead
+
 ## Usage
 
 
