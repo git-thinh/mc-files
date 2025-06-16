@@ -1,7 +1,7 @@
 //import fs from "fs";
 
-import Canvas from "../canvas/index.cjs";
-import * as pdfjsLib from "./pdf.min.mjs";
+import Canvas from "../../canvas/index.cjs";
+import { getDocument } from "./pdf.mjs";
 
 class NodeCanvasFactory {
     create(width, height) {
@@ -34,7 +34,7 @@ class NodeCanvasFactory {
 }
 
 // Set the path to the worker script
-//pdfjsLib.GlobalWorkerOptions.workerSrc = './pdf.worker.min.mjs';
+//GlobalWorkerOptions.workerSrc = './pdf.worker.min.mjs';
 
 // Some PDFs need external cmaps.
 const CMAP_URL = "./cmaps/";
@@ -54,7 +54,7 @@ const canvasFactory = new NodeCanvasFactory();
 
 export default async function (bytes) {
     // Load the PDF file.
-    const loadingTask = pdfjsLib.getDocument({
+    const loadingTask = getDocument({
         data: bytes,
         cMapUrl: CMAP_URL,
         cMapPacked: CMAP_PACKED,

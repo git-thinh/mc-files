@@ -11,7 +11,10 @@ globalThis.DOMMatrix = require("./dommatrix.cjs");
 //const CMAP_URL = "./legacy/web/cmaps/";
 //const CMAP_PACKED = true;
 
-const pdfjsLib = require("./pdf.js");
+const pdfjsLib = require("./pdf.cjs");
+
+// Set the path to the worker script
+pdfjsLib.GlobalWorkerOptions.workerSrc = './pdf.worker.cjs';
 
 module.exports = async function (bytes) {
     let svg = '';
