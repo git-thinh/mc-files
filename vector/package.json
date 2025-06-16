@@ -1,0 +1,20 @@
+{
+	"name": "app",
+	"private": true,
+	"scripts": {
+		"prod": "node app.js --max-old-space-size=8192",
+		"dev": "node app.js --max-old-space-size=8192"
+	},
+	"devDependencies": {
+		"express": "^4.18.2",
+		"serve": "^14.2.1"
+	},
+	"dependencies": {
+		"body-parser": "^1.20.2",
+		"cors": "^2.8.5",
+		"ghostscript-js": "^1.1.11",
+		"image-size": "^1.0.2",
+		"jimp": "^0.22.10",
+		"multer": "^1.4.5-lts.1"
+	}
+}
