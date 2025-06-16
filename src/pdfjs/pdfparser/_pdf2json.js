@@ -15,6 +15,7 @@ export default function (file) {
             ret(pdfData)
         });
 
-        pdfParser.loadPDF(file);
+        if (typeof file === 'string') pdfParser.loadPDF(file);
+        else pdfParser.parseBuffer(file);
     })
 }
