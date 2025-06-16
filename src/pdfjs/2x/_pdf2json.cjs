@@ -5,13 +5,13 @@
 
 // HACK few hacks to let PDF.js be loaded not as a module in global space.
 require("./domstubs.cjs").setStubs(global);
-globalThis.DOMMatrix = require("./dommatrix.js");
+globalThis.DOMMatrix = require("./dommatrix.cjs");
 
 //const pdfjsLib = require("./legacy/pdf.js");
 //const CMAP_URL = "./legacy/web/cmaps/";
 //const CMAP_PACKED = true;
 
-const pdfjsLib = require("./js/pdf.js");
+const pdfjsLib = require("./pdf.js");
 
 module.exports = async function (bytes) {
     let svg = '';

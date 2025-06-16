@@ -1,4 +1,4 @@
-﻿import fs from "fs";
+﻿//import fs from "fs";
 import PDFParser from "./pdfparser.cjs";
 
 const pdfParser = new PDFParser();
