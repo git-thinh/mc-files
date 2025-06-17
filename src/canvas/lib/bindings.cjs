@@ -3,6 +3,7 @@
 var bindings;
 if (process.platform === "win32") bindings = require('../build/win32/canvas.node')
 else bindings = require('../build/linux/canvas.node')
+//console.log('bindings =', process.platform, bindings);
 
 module.exports = bindings
 
